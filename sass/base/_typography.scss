@@ -1,0 +1,79 @@
+body{
+    font-family: $font-primary; 
+    color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+%heading {
+    font-family: $font-secondary;
+    font-weight: 400;
+}
+
+.heading-1{
+    @extend %heading;
+    font-size: 4.5rem;
+    color: $color-grey-light-1;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+.heading-2{
+    @extend %heading;
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 1;
+}
+
+.heading-3{
+    @extend %heading;
+    font-size: $default-font-size;
+    color: $color-primary;
+    text-transform: uppercase
+}
+
+.heading-3-header{
+    display: grid;
+    align-items: end;
+    font-size: 3rem;
+    padding-top: 5rem;
+}
+
+.heading-4{ 
+    @extend %heading;
+    font-size: 1.9rem;
+
+    &--light{ color:$color-grey-light-1;}
+    &--dark{ color:$color-grey-dark-1;}
+}
+
+.heading-5{
+    text-align: center;
+    padding: 7.5rem 0 7.5rem 0;
+    @extend %heading;
+    font-size: 3.5rem;
+    color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    position: relative;   
+    
+    background-color: $color-white;
+
+    @media only screen and (max-width: $bp-medium){
+        padding: 3.75rem 0;
+    } 
+
+    &-testimonial{
+        padding-bottom: 12.5rem;
+
+        @media only screen and (max-width: $bp-medium){
+            padding: 6.25rem 0rem;
+        } 
+    }
+    
+    &-realtors{
+        background:$color-grey-light-1;
+    } 
+}
+

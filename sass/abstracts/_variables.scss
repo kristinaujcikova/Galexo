@@ -1,0 +1,31 @@
+// COLOR 
+$color-primary: #cf9e61; 
+$color-primary-dark: #df9944;
+
+$color-secondary: #0d1e32;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #554a3d;
+$color-grey-dark-2: #6D5D4B;
+
+$color-white: #fff;
+$color-black: #111;
+  
+// FONT 
+$font-primary: 'Nunito', sans-serif;
+$font-secondary: 'Josefin Sans', sans-serif;
+$default-font-size: 1.6rem;
+
+//RESPONSIVE BREAKPOINT
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50rem; // 800px
+$bp-small: 37.5em; //600px
+  
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+$gutter-vertical-small: 6rem;

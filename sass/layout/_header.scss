@@ -1,0 +1,73 @@
+.header {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.9),
+      rgba($color-secondary, 0.9)
+    ),
+    url(../img/house-2.jpg);
+  background-size: cover;
+  padding: 0 8rem 8rem 8rem;
+  max-height: 100vh;
+
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.5rem;
+  justify-content: center;
+  position: relative;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 3rem 3rem;
+    grid-column: -1 / 1;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    display: block;
+  }
+
+  &__logo {
+    height: 3rem;
+    width: auto;
+    justify-self: center;
+  }
+
+  &--text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+    margin-top: 8rem;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor;
+    }
+  }
+
+  &--logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+    margin-top: 5rem;
+
+    img {
+      max-height: 3.5rem;
+      width: auto;
+      filter: brightness(70%);
+
+      @media only screen and (max-width: $bp-small) {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

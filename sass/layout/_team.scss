@@ -1,0 +1,53 @@
+.team{
+    display: grid;
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+    padding-bottom: 15rem;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-medium){
+        padding-bottom: 7.5rem;
+        grid-gap: 3rem;
+        display: block;
+    } 
+
+    @media only screen and (max-width: $bp-small){
+        padding-bottom: 5rem;
+    } 
+
+    &__member{
+        border-radius: 6px;
+        @include boxShadow;
+        display: grid;
+        transition: all .4s;
+        padding: 2rem;
+
+        &:hover{
+            transform: scale(1.1); 
+        }
+
+        @media only screen and (max-width: $bp-medium){
+            padding: 3.5rem;
+
+            &:not(:last-child){
+            margin-bottom: 3rem; 
+            } 
+        }
+    }
+
+    &__img{
+       padding-bottom: 1.5rem;
+    }
+
+    &__span{ 
+        display: block;
+        $color-grey-light-2: #aaa;
+        margin: 1.8rem 0;
+        font-size: 1.3rem;
+    }
+
+    &__p{
+        font-size: $default-font-size;
+    }
+}              

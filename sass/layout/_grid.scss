@@ -1,0 +1,72 @@
+/*
+.container{
+    display: grid;
+    grid-template-rows: 90vh repeat(5, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}  9
+*/
+ 
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+    padding: 0 3rem;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    
+        @media only screen and (max-width: $bp-medium){
+            margin-bottom: $gutter-vertical-small;
+        } 
+    }
+         
+    @media only screen and(max-width: $bp-medium) {
+        max-width: 75rem;
+        padding: 0 3rem !important;
+    }
+
+    @media only screen and(phone) {
+        max-width: 50rem;
+        padding: 0 1.5rem !important;
+    }
+
+    @include clearfix;
+
+    [class^="col-"] {
+    float: left;
+
+        &:not(:last-child){
+            margin-right: $gutter-horizontal;
+
+            @media only screen and(max-width: $bp-medium){
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @media only screen and(max-width: $bp-medium){
+            width: 100% !important;
+        }
+    }
+
+    &__nav{
+        margin-bottom: 0rem;
+        margin: 0;
+    }
+}
+
+.content{
+    width: 100%;
+    background-color: $color-white;
+
+    &__footer{
+        background-color: $color-secondary;
+    }
+
+    &__features{
+        background-color: $color-white;
+    }
+
+    &__navigation{ 
+        width: 100%;
+    }
+}
